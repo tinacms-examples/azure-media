@@ -11,13 +11,15 @@
   },
   "dependencies": {
     "next": "^14.2.23",
+    "next-tinacms-azure": "workspace:*",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "tinacms": "^2.6.2",
+    "sharp": "^0.33.5",
+    "tinacms": "workspace:*",
     "typescript": "5.5.2"
   },
   "devDependencies": {
-    "@tinacms/cli": "^1.8.2",
+    "@tinacms/cli": "workspace:*",
     "@types/node": "^22.13.1",
     "eslint": "^8.57.1",
     "eslint-config-next": "^14.2.23"
