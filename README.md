@@ -1,47 +1,47 @@
-This is a [Tina CMS](https://tina.io/) project.
+# **TinaCMS + Next.js + Azure Blob Storage Example**
 
-## Local Development
+This repository demonstrates how to integrate [TinaCMS](https://tina.io/) with [Next.js](https://nextjs.org/) while leveraging **Microsoft Azure Blob Storage** for media asset management using [`next-tinacms-azure`](https://github.com/tinacms/tinacms/tree/main/packages/next-tinacms-azure).
 
-Install the project's dependencies:
+## 🚀 Features
 
-> [!NOTE]  
-> [Do you know the best package manager for Node.js?](https://www.ssw.com.au/rules/best-package-manager-for-node/) Using the right package manager can greatly enhance your development workflow. We recommend using pnpm for its speed and efficient handling of dependencies. Learn more about why pnpm might be the best choice for your projects by checking out this rule from SSW.
+- **Next.js + TinaCMS** – A modern stack for headless content editing.
+- **Azure Blob Storage** – Store images and media files in Azure instead of TinaCloud.
+- **`next-tinacms-azure`** – A custom integration to connect TinaCMS with Azure Storage.
+- **Next.js App Router support** – Works seamlessly with the latest Next.js versions.
 
-```
+
+## 🛠 Getting Started
+
+### 1️⃣ Install Dependencies
+
+We recommend using [`pnpm`](https://pnpm.io/) for efficiency:
+
+```sh
 pnpm install
 ```
 
-Run the project locally:
+### 2️⃣ Configure Environment Variables
 
+Create a `.env` file (or rename `.env.example`) and set the following values:
+
+```sh
+# Retrieved from your project at app.tina.io
+NEXT_PUBLIC_TINA_CLIENT_ID=your-tina-client-id
+TINA_TOKEN=your-tina-token
+
+# This is set by default in CI/CD pipelines (Netlify/Vercel/GitHub)
+NEXT_PUBLIC_TINA_BRANCH=your-git-branch
+
+# Azure Blob Storage Configuration
+AZURE_STORAGE_CONNECTION_STRING=your-azure-blob-connection-string
+AZURE_STORAGE_CONTAINER_NAME=your-container-name
 ```
+
+### 3️⃣ Run the Development Server
+
+```sh
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit [http://localhost:3000](http://localhost:3000) to start editing content with TinaCMS.
 
-### Building the Starter Locally (Using the hosted content API)
-
-Replace the `.env.example`, with `.env`
-
-```
-NEXT_PUBLIC_TINA_CLIENT_ID=<get this from the project you create at app.tina.io>
-TINA_TOKEN=<get this from the project you create at app.tina.io>
-NEXT_PUBLIC_TINA_BRANCH=<Specify the branch with Tina configured>
-```
-
-Build the project:
-
-```bash
-pnpm build
-```
-
-## Learn More
-
-To learn more about Tina, take a look at the following resources:
-
-- [Tina Docs](https://tina.io/docs)
-- [Getting started](https://tina.io/docs/setup-overview/)
-
-You can check out [Tina Github repository](https://github.com/tinacms/tinacms) - your feedback and contributions are welcome!
-
-## [Deploy on Vercel](https://tina.io/guides/tina-cloud/add-tinacms-to-existing-site/deployment/)

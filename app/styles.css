@@ -1,0 +1,6 @@
+img {
+  max-width: 600px;
+  height: auto; /* Maintains aspect ratio */
+  display: block; /* Removes extra spacing below inline images */
+}
+

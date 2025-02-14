@@ -14,7 +14,7 @@ const handlers = createMediaHandlers({
 
       const user = await isAuthorized(req);
 
-      return user?.verified || false;
+      return !!user?.verified || false;
     } catch (e) {
       console.error(e);
       return false;
